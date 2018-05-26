@@ -34,15 +34,16 @@ Data를 어디에서 수집하느냐에 따라 다음의 두가지로 나눠볼 
 잘 알려진 유명인의 사진을 이용하여 얼굴인식 수행.
 
 1. 데이터 수집 과정
-  1-1 Extreme Picture Finder를 이용하여 데이터를 수집한다.
+  
+  a. Extreme Picture Finder를 이용하여 데이터를 수집한다.
 
-  1-2. Visipics를 이용하여 중복데이터를 제거한다.
+  b. Visipics를 이용하여 중복데이터를 제거한다.
 
-  1-3. Naver의 Clova Face Recognition API를 이용하여 기존에 수집한 전체 데이터에 대해 우리가 원하는 얼굴사진이 맞는지 확인한다.
+  c. Naver의 Clova Face Recognition API를 이용하여 기존에 수집한 전체 데이터에 대해 우리가 원하는 얼굴사진이 맞는지 확인한다.
 
-  1-4. openface docker를 이용하여 사진의 눈코입이 동일 위치에 오도록 변환한다.
+  d. openface docker를 이용하여 사진의 눈코입이 동일 위치에 오도록 변환한다.
 
-  1-5. 얼굴인식을 하는데 있어 색상정보는 필요하지 않으므로 흑백으로 변환한다.
+  e. 얼굴인식을 하는데 있어 색상정보는 필요하지 않으므로 흑백으로 변환한다.
       $ python colorToGray.py
 
 
@@ -51,7 +52,7 @@ Data를 어디에서 수집하느냐에 따라 다음의 두가지로 나눠볼 
   
   
 3. 얼굴 인식 수행
-  3-1 학습된 Recognizer를 알FTP를 이용하여 Pi\trainer로 이동시킨다.
+  a. 학습된 Recognizer를 알FTP를 이용하여 Pi\trainer로 이동시킨다.
   
-  3-2 얼굴 인식을 수행한다.
+  b. 얼굴 인식을 수행한다.
       $python 03RecognitionClient.py
